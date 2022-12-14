@@ -8,7 +8,7 @@ import java.util.Objects;
 import java.util.Set;
 
 @Entity
-@Table(name = "_TODO")
+@Table(name = "TODO")
 public class Todo {
 
     @Id
@@ -95,8 +95,8 @@ public class Todo {
         return priority;
     }
 
-    public void setPriority(Priority priotity) {
-        this.priority = priotity;
+    public void setPriority(Priority priority) {
+        this.priority = priority;
     }
 
     public User getUser() {

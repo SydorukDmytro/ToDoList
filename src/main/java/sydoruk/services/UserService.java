@@ -15,11 +15,13 @@ import java.util.stream.Collectors;
 
 @Service
 public class UserService implements IUserService {
-    private final UserRepository userRepository;
+
     private final Converter converter;
+    private final UserRepository userRepository;
 
     @Autowired
-    public UserService(Converter converter, UserRepository userRepository) {
+    public UserService(Converter converter,
+                       UserRepository userRepository) {
         this.converter = converter;
         this.userRepository = userRepository;
     }
@@ -37,31 +39,28 @@ public class UserService implements IUserService {
     @Transactional(readOnly = true)
     public UserPojo getUser(Long id) {
 
-        Optional<User> foundUserOpt = userRepository.findById(id);
+        Optional<User> foundUserOptional = userRepository.findById(id);
 
-        if(foundUserOpt.isPresent()){
-            return converter.userToPojo(foundUserOpt.get());
-        }else{
+        if (foundUserOptional.isPresent()) {
+            return converter.userToPojo(foundUserOptional.get());
+        } else {
             return converter.userToPojo(new User());
         }
-
     }
 
     @Override
     @Transactional(readOnly = true)
     public List<UserPojo> getAllUsers() {
-        List<User> listOfUsers= userRepository.findAll();
-
+        List<User> listOfUsers = userRepository.findAll();
         return listOfUsers.stream().map(user -> converter.userToPojo(user)).collect(Collectors.toList());
-
     }
 
     @Override
     @Transactional
     public UserPojo updateUser(User source, Long id) {
-        Optional<User> userForUpdate = userRepository.findById(id);
-        if (userForUpdate.isPresent()) {
-            User target = userForUpdate.get();
+        Optional<User> userForUpdateOptional = userRepository.findById(id);
+        if (userForUpdateOptional.isPresent()) {
+            User target = userForUpdateOptional.get();
             target.setEmail(source.getEmail());
             target.setPassword(source.getPassword());
             userRepository.save(target);
@@ -74,12 +73,13 @@ public class UserService implements IUserService {
     @Override
     @Transactional
     public String deleteUser(Long id) {
-        Optional<User> userForDelete = userRepository.findById(id);
-        if (userForDelete.isPresent()){
-            userRepository.delete(userForDelete.get());
-            return "User with id: " + id + " was successfully deleted";
-        }else{
-            return "User with id: " + id + " doesn't exist";
+        Optional<User> userForDeleteOptional = userRepository.findById(id);
+
+        if (userForDeleteOptional.isPresent()) {
+            userRepository.delete(userForDeleteOptional.get());
+            return "User with id:" + id + " was successfully remover";
+        } else {
+            return "User with id:" + id + " doesn't exist";
         }
     }
 }

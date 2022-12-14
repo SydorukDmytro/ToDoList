@@ -15,20 +15,20 @@ public class TagService implements ITagService {
     private final TagRepository tagRepository;
 
     @Autowired
-    public TagService(TagRepository tagRepository) {
+    public TagService (TagRepository tagRepository) {
         this.tagRepository = tagRepository;
     }
-
     @Override
     @Transactional
     public Tag findOrCreate(Tag tag) {
-        List<Tag> tagList = tagRepository.findByName(tag.getName());
-        if(tagList.isEmpty()){
+
+        List<Tag> foundTags = tagRepository.findByName(tag.getName());
+
+        if(foundTags.isEmpty()) {
             tagRepository.save(tag);
             return tag;
-        }else{
-            return tagList.get(0);
+        } else {
+            return foundTags.get(0);
         }
-
     }
 }

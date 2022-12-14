@@ -18,6 +18,7 @@ import java.util.stream.Collectors;
 
 @Service
 public class TodoService implements ITodoService {
+
     private final Converter converter;
     private final ITagService tagService;
     private final TodoRepository todoRepository;
@@ -41,13 +42,13 @@ public class TodoService implements ITodoService {
         Optional<User> todoUserOptional = userRepository.findById(userId);
 
         if (todoUserOptional.isPresent()) {
-            User todoUser = todoUserOptional.get();
+
             Set<Tag> tags = new HashSet<>();
             tags.addAll(todo.getTagList());
 
             todo.getTagList().clear();
 
-            todo.setUser(todoUser);
+            todo.setUser(todoUserOptional.get());
             todoRepository.save(todo);
 
             tags.stream().map(tag -> tagService.findOrCreate(tag)).collect(Collectors.toSet()).forEach(todo::addTag);

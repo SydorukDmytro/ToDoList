@@ -6,7 +6,7 @@ import java.util.HashSet;
 import java.util.Set;
 
 @Entity
-@Table(name = "_TAG")
+@Table(name = "TAG")
 public class Tag {
 
     @Id
@@ -19,6 +19,13 @@ public class Tag {
 
     @ManyToMany(mappedBy = "tagList")
     private Set<Todo> todoList = new HashSet<>();
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
 
     public Long getId() {
         return id;
@@ -26,14 +33,6 @@ public class Tag {
 
     public void setId(Long id) {
         this.id = id;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
     }
 
     public Set<Todo> getTodoList() {

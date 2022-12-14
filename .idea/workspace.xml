@@ -9,37 +9,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="84bc617e-6999-4274-b0ba-2f34ffde504d" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jpa-buddy.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/sydoruk/controllers/TodoController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/sydoruk/controllers/UserController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/sydoruk/domain/Priority.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/sydoruk/domain/Tag.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/sydoruk/domain/Todo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/sydoruk/domain/User.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/sydoruk/domain/plainObjects/TagPojo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/sydoruk/domain/plainObjects/TodoPojo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/sydoruk/domain/plainObjects/UserPojo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/sydoruk/repositories/TagRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/sydoruk/repositories/TodoRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/sydoruk/repositories/UserRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/sydoruk/services/TagService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/sydoruk/services/TodoService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/sydoruk/services/UserService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/sydoruk/services/interfaces/ITagService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/sydoruk/services/interfaces/ITodoService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/sydoruk/services/interfaces/IUserService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/sydoruk/utils/Converter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/main.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterDir="false" />
+    <list default="true" id="84bc617e-6999-4274-b0ba-2f34ffde504d" name="Changes" comment="Spring Data used">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/sydoruk/domain/Tag.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sydoruk/domain/Tag.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/sydoruk/domain/Todo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sydoruk/domain/Todo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/sydoruk/domain/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sydoruk/domain/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/sydoruk/services/TagService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sydoruk/services/TagService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/sydoruk/services/TodoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sydoruk/services/TodoService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/sydoruk/services/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sydoruk/services/UserService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -198,8 +176,16 @@
       <updated>1670977482888</updated>
       <workItem from="1670977484366" duration="3460000" />
       <workItem from="1671009312610" duration="7964000" />
-      <workItem from="1671031474053" duration="7442000" />
+      <workItem from="1671031474053" duration="9891000" />
     </task>
+    <task id="LOCAL-00001" summary="Spring Data used">
+      <created>1671039624993</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1671039624993</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -215,5 +201,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Spring Data used" />
+    <option name="LAST_COMMIT_MESSAGE" value="Spring Data used" />
   </component>
 </project>
