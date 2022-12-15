@@ -9,15 +9,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="84bc617e-6999-4274-b0ba-2f34ffde504d" name="Changes" comment="Spring Data used">
+    <list default="true" id="84bc617e-6999-4274-b0ba-2f34ffde504d" name="Changes" comment="Spring Data used2">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/sydoruk/controllers/TodoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sydoruk/controllers/TodoController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/sydoruk/domain/Tag.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sydoruk/domain/Tag.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/sydoruk/domain/Todo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sydoruk/domain/Todo.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/sydoruk/domain/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sydoruk/domain/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/sydoruk/services/TagService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sydoruk/services/TagService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/sydoruk/services/TodoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sydoruk/services/TodoService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/sydoruk/services/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sydoruk/services/UserService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,25 +53,25 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "D:/MyApps/ToDoList",
-    "project.structure.last.edited": "Project",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
-    "settings.editor.selected.configurable": "preferences.lookFeel",
-    "spring.configuration.checksum": "e3a822672a0df1728ad415571e784e0b"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/MyApps/ToDoList&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;,
+    &quot;spring.configuration.checksum&quot;: &quot;e3a822672a0df1728ad415571e784e0b&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "mysql"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;mysql&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RunManager">
     <configuration name="Tomcat 10.0.27" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 10.0.27" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
       <option name="UPDATING_POLICY" value="restart-server" />
@@ -176,7 +173,8 @@
       <updated>1670977482888</updated>
       <workItem from="1670977484366" duration="3460000" />
       <workItem from="1671009312610" duration="7964000" />
-      <workItem from="1671031474053" duration="9891000" />
+      <workItem from="1671031474053" duration="10221000" />
+      <workItem from="1671102014359" duration="2731000" />
     </task>
     <task id="LOCAL-00001" summary="Spring Data used">
       <created>1671039624993</created>
@@ -185,7 +183,14 @@
       <option name="project" value="LOCAL" />
       <updated>1671039624993</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Spring Data used2">
+      <created>1671041924558</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1671041924558</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -204,6 +209,18 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Spring Data used" />
-    <option name="LAST_COMMIT_MESSAGE" value="Spring Data used" />
+    <MESSAGE value="Spring Data used2" />
+    <option name="LAST_COMMIT_MESSAGE" value="Spring Data used2" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/sydoruk/controllers/TodoController.java</url>
+          <line>22</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

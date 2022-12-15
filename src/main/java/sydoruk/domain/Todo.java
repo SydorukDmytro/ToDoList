@@ -13,7 +13,7 @@ public class Todo {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(name = "ID")
+    @Column(name = "ID", unique = true)
     private Long id;
 
     @Column(name = "NAME", nullable = false)
@@ -36,7 +36,9 @@ public class Todo {
     private Priority priority;
 
     @ManyToMany
-    @JoinTable(name = "TODO_TAG", joinColumns = @JoinColumn(name = "TODO_ID"), inverseJoinColumns = @JoinColumn(name = "TAG_ID"))
+    @JoinTable(name = "TODO_TAG",
+            joinColumns = @JoinColumn(name = "TODO_ID", referencedColumnName = "ID"),
+            inverseJoinColumns = @JoinColumn(name = "TAG_ID", referencedColumnName = "ID"))
     private Set<Tag> tagList = new HashSet<>();
 
     @ManyToOne

@@ -20,7 +20,7 @@ public class TodoController {
         this.todoService = todoService;
     }
 
-    @PostMapping(path = "/user/{userId}/creatingtodo")
+    @PostMapping(path = "/user/{userId}/todo")
     public ResponseEntity<TodoPojo> createTodo(@PathVariable Long userId, @RequestBody Todo todo) {
         TodoPojo result = todoService.createTodo(todo, userId);
         return new ResponseEntity<>(result, HttpStatus.CREATED);
