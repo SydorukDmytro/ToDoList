@@ -8,41 +8,41 @@ import java.util.Objects;
 import java.util.Set;
 
 @Entity
-@Table(name = "TODO")
+@Table(name = "todo")
 public class Todo {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(name = "ID", unique = true)
+    @Column(name = "id", unique = true)
     private Long id;
 
-    @Column(name = "NAME", nullable = false)
+    @Column(name = "name", nullable = false)
     private String name;
 
-    @Column(name = "COMMENT")
+    @Column(name = "comment")
     private String comment;
 
-    @Column(name = "START_DATE")
+    @Column(name = "start_date")
     private Date startDate;
 
-    @Column(name = "END_DATE")
+    @Column(name = "end_date")
     private Date endDate;
 
-    @Column(name = "IMPORTANT")
+    @Column(name = "important")
     private Boolean important;
 
-    @Column(name = "PRIORITY")
+    @Column(name = "priority")
     @Enumerated(EnumType.STRING)
     private Priority priority;
 
     @ManyToMany
-    @JoinTable(name = "TODO_TAG",
+    @JoinTable(name = "todo_tag",
             joinColumns = @JoinColumn(name = "TODO_ID", referencedColumnName = "ID"),
             inverseJoinColumns = @JoinColumn(name = "TAG_ID", referencedColumnName = "ID"))
     private Set<Tag> tagList = new HashSet<>();
 
     @ManyToOne
-    @JoinColumn(name = "USER_ID", nullable = false)
+    @JoinColumn(name = "user_id", nullable = false)
     private User user;
 
     public Long getId() {

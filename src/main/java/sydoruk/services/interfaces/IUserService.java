@@ -7,6 +7,7 @@ import java.util.List;
 
 public interface IUserService {
     UserPojo createUser(User user);
+    UserPojo findUserByEmailAndPass(String email, String password);
     UserPojo getUser(Long id);
     List<UserPojo> getAllUsers();
     UserPojo updateUser(User user, Long id);

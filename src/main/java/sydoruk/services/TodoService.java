@@ -7,6 +7,7 @@ import sydoruk.domain.Tag;
 import sydoruk.domain.Todo;
 import sydoruk.domain.User;
 import sydoruk.domain.plainObjects.TodoPojo;
+import sydoruk.exceptions.CustomEmptyDataException;
 import sydoruk.repositories.TodoRepository;
 import sydoruk.repositories.UserRepository;
 import sydoruk.services.interfaces.ITagService;
@@ -55,23 +56,23 @@ public class TodoService implements ITodoService {
 
             return converter.todoToPojo(todo);
         } else {
-            return converter.todoToPojo(new Todo());
+            throw new CustomEmptyDataException("unable to get user for todo");
         }
     }
 
     @Override
     @Transactional
-    public TodoPojo getTodo(Long id) {
+    public TodoPojo getTodo(Long id, Long userId) {
         Optional<Todo> todoOptional = todoRepository.findById(id);
         if (todoOptional.isPresent()) {
             return converter.todoToPojo(todoOptional.get());
         }
-        return converter.todoToPojo(new Todo());
+        throw new CustomEmptyDataException("unable to get todo");
     }
 
     @Override
     @Transactional
-    public TodoPojo updateTodo(Todo source, Long todoId) {
+    public TodoPojo updateTodo(Todo source, Long todoId, Long userId) {
 
         Optional<Todo> targetOptional = todoRepository.findById(todoId);
 
@@ -89,13 +90,13 @@ public class TodoService implements ITodoService {
 
             return converter.todoToPojo(target);
         } else {
-            return converter.todoToPojo(new Todo());
+            throw new CustomEmptyDataException("unable to update todo");
         }
     }
 
     @Override
     @Transactional
-    public String deleteTodo(Long id) {
+    public String deleteTodo(Long id, Long userId) {
 
         Optional<Todo> todoForDeleteOptional = todoRepository.findById(id);
         if(todoForDeleteOptional.isPresent()) {
@@ -104,7 +105,7 @@ public class TodoService implements ITodoService {
             todoRepository.delete(todoForDelete);
             return "Todo with id:" + id + " was successfully removed";
         }
-        return "Todo with id:" + id + " was not found";
+        throw new CustomEmptyDataException("unable to delete todo");
     }
 
     @Override

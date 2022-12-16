@@ -5,6 +5,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import sydoruk.domain.User;
 import sydoruk.domain.plainObjects.UserPojo;
+import sydoruk.exceptions.CustomEmptyDataException;
 import sydoruk.repositories.UserRepository;
 import sydoruk.services.interfaces.IUserService;
 import sydoruk.utils.Converter;
@@ -26,6 +27,15 @@ public class UserService implements IUserService {
         this.userRepository = userRepository;
     }
 
+    public UserPojo findUserByEmailAndPass(String email, String password){
+       Optional<User> user = userRepository.findByEmailAndPassword(email, password);
+       if(user.isPresent()){
+           return converter.userToPojo(user.get());
+       }else{
+           return null;
+       }
+    }
+
     @Override
     @Transactional
     public UserPojo createUser(User user) {
@@ -44,7 +54,7 @@ public class UserService implements IUserService {
         if (foundUserOptional.isPresent()) {
             return converter.userToPojo(foundUserOptional.get());
         } else {
-            return converter.userToPojo(new User());
+            throw new CustomEmptyDataException("unable to get user");
         }
     }
 
@@ -66,7 +76,7 @@ public class UserService implements IUserService {
             userRepository.save(target);
             return converter.userToPojo(target);
         } else {
-            return converter.userToPojo(new User());
+            throw new CustomEmptyDataException("unable to update user");
         }
     }
 
@@ -79,7 +89,7 @@ public class UserService implements IUserService {
             userRepository.delete(userForDeleteOptional.get());
             return "User with id:" + id + " was successfully remover";
         } else {
-            return "User with id:" + id + " doesn't exist";
+            throw new CustomEmptyDataException("unable to delete user");
         }
     }
 }

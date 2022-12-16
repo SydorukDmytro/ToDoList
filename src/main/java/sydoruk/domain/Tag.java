@@ -6,15 +6,15 @@ import java.util.HashSet;
 import java.util.Set;
 
 @Entity
-@Table(name = "TAG")
+@Table(name = "tag")
 public class Tag {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(name = "ID", unique = true)
+    @Column(name = "id", unique = true)
     private Long id;
 
-    @Column(name = "NAME")
+    @Column(name = "name")
     private String name;
 
     @ManyToMany(mappedBy = "tagList")
